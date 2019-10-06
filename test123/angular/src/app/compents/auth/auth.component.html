@@ -1,0 +1,22 @@
+<div id="container">
+    <h1>DAIRY APP</h1>
+    <div id="auth">
+        <form [formGroup]="profileForm" (ngSubmit)="Register(password,login)" id = "form">
+            <mat-form-field class="example-full-width">
+                <textarea matInput placeholder="login" formControlName="login" #login></textarea>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <textarea matInput placeholder="password" formControlName="password" #password></textarea>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary">Regist</button>
+
+
+        </form>
+        <div id="buttons">
+            <button mat-flat-button color="accent" (click)="Login(password,login)">Login</button>
+            <button mat-flat-button color="warn" (click) = "LogOutFunc()">Log Out</button>
+        </div>
+        <div id="status">Loggined Status: {{loginStatus}} </div>
+    </div>
+</div>

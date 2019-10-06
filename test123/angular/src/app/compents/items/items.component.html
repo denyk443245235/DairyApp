@@ -1,0 +1,21 @@
+<div id="container">
+    <mat-card id="card">
+        <h2>Items</h2>
+        <div id="input">
+            <mat-form-field class="example-full-width">
+                <textarea matInput placeholder="Type name here" #item></textarea>
+            </mat-form-field>
+            <button *ngIf="!loginStatus" mat-raised-button disabled>Add new</button>
+            <button *ngIf="loginStatus" mat-raised-button color="primary" (click)="AddItems(item)">Add new</button>
+        </div>
+        <mat-spinner id="spiner" [ngClass]="CurrentClass"></mat-spinner>
+        <div id="items" *ngFor="let item of items">
+            <button *ngIf="!loginStatus" class='item' mat-button disabled>{{item.name}}</button>
+            <button *ngIf="loginStatus" class='item' mat-button color="accent"
+                (click)='goComment(item)'>{{item.name}}</button>
+
+            <button *ngIf="!loginStatus" mat-raised-button disabled>Delete</button>
+            <button *ngIf="loginStatus" mat-raised-button color="warn" (click)="Delete(item._id)">Delete</button>
+        </div>
+    </mat-card>
+</div>

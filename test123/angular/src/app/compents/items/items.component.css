@@ -1,0 +1,45 @@
+.visible{
+    display: block;
+}
+.unvisable{
+    display: none;
+}
+#container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+ 
+}
+#container #card{
+    border-radius: 10px;
+    width: 80%;
+    height: 60vh;
+    margin-top: 50px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+}
+#input{
+    margin-top: 20px;
+
+}
+#input .example-full-width{
+    width: 60%;
+}
+#input button{
+    margin: 0 10px;
+    padding: 0px 13px;
+}
+#items{
+
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#items .item{
+    margin: 30px 20px;
+    font-size: 20px;
+}
+#items button{
+    height: 50%;
+}

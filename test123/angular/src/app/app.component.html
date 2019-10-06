@@ -1,0 +1,5 @@
+<div id="container">
+  <app-auth id="auth" (LoginStatus)="SendStatus($event)" (LogOut)="LogOut()" [loginStatus]="loginStatus"></app-auth>
+  <app-items (Send)="getItem($event)" id="items" [loginStatus]="loginStatus" ></app-items>
+  <app-comments [item]="item" id="comments" ></app-comments>
+</div>

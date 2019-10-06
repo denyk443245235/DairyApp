@@ -1,0 +1,25 @@
+<div id="container">
+    <mat-card id="card">
+        <p id="title">Comments {{item}}</p>
+        <div id="field" *ngIf="Comments" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+
+            <div *ngFor="let comment of Comments">
+                <div>{{comment.user}}</div>
+                <div class="alert alert-success card" role="alert">
+                    {{comment.message}}</div>
+
+            </div>
+
+        </div>
+        <div id="inputs">
+
+            <mat-form-field class="example-full-width" class="input">
+                <input matInput #message maxlength="256" placeholder="Message" #message>
+                <mat-hint align="start"><strong>Don't disclose personal info</strong> </mat-hint>
+                <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+            </mat-form-field>
+            <button *ngIf="!Item" mat-stroked-button color="accent" disabled>Accent</button>
+            <button *ngIf="Item" mat-stroked-button color="accent" (click)="AddComment(message)">Accent</button>
+        </div>
+    </mat-card>
+</div>

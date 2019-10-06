@@ -1,0 +1,19 @@
+
+#container{
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+#auth{
+    width: 20%;
+    background-color:lightslategray;
+    height: 100vh;
+}
+#items{
+    width: 30%;
+    height: 100vh;
+}
+#comments{
+    width: 40%;
+    height: 100vh;
+}
